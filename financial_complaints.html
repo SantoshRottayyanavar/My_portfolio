@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SantoshRottayyanavar_portfolio</title>
+    <link rel="icon" href="images/facicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="financial_complaints.css">
+    <script src="https://kit.fontawesome.com/2fb5adb165.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="fcdataanalysis">
+    <div class="container">
+
+      <nav>
+        <img src="images/financial complaints logo.png" class="logo">
+        <ul id="sidemenu">
+          <li><a href="index.html#header">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+
+      <div class="fctitle">
+        <h1>Financial Complaints</h1>
+
+      <div class="fc-sub-title">
+        <p>Hover over the dashboard to explore interactive features.</p>
+      </div>
+      </div>
+
+ <!-- Tableau screenshot and link -->
+  <div class="TableauWrapper">
+<a href="https://public.tableau.com/app/profile/santosh.rottayyanavar2698/viz/Financecomplaint/Dashboard1" target="_blank">
+  <img src="images/tableau financial complaints dashboard.png" alt="Tableau Preview" style="width: 100%; max-width: 1500px; height: 600px;">
+  <p>Click to open interactive Tableau dashboard</p>
+</a>
+
+</div>
+<a href="more_projects.html" class="btn">Back</a>
+<script>
+    var sidemenu = document.getElementById("sidemenu")
+
+    function openmenu()
+    {
+        sidemenu.style.right = "0";
+    }
+     function closemenu()
+    {
+        sidemenu.style.right = "-200px";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SantoshRottayyanavar_portfolio</title>
+    <link rel="icon" href="images/facicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="accident_data.css">
+    <script src="https://kit.fontawesome.com/2fb5adb165.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="Accident_data">
+    <div class="container">
+
+      <nav>
+        <img src="images/accidnt_logo.jpg" class="logo">
+        <ul id="sidemenu">
+          <li><a href="index.html#header">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+
+      <div class="adtitle">
+        <h1>Accident Data Analysis</h1>
+
+      <div class="ad-sub-title">
+        <p>Hover over the dashboard to explore interactive features.</p>
+      </div>
+      </div>
+
+      <!-- tableau screenshot and link -->
+  <div class="tableauWrapper">
+<a href="https://public.tableau.com/views/HospitalEmargencyRoom/EmergencyRoomDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank">
+  <img src="images/accident_data_dashboard.jpg" alt="tableau Preview" style="width: 100%; max-width: 1500px; height: 600px;">
+  <p>Click to open interactive Tableau dashboard</p>
+</a>
+</div>
+<a href="more_projects.html" class="btn">Back</a>
+<script>
+    var sidemenu = document.getElementById("sidemenu")
+
+    function openmenu()
+    {
+        sidemenu.style.right = "0";
+    }
+     function closemenu()
+    {
+        sidemenu.style.right = "-200px";
+    }
+</script>
+</body>
+</html>
+
