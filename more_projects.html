@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>More Projects — Santosh Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+:root{
+  --red:#e8364a;
+  --red-dim:rgba(232,54,74,0.12);
+  --red-glow:rgba(232,54,74,0.25);
+  --bg:#080a0f;
+  --bg2:#0f1117;
+  --surface:#1a1f2e;
+  --surface2:#212638;
+  --border:rgba(255,255,255,0.07);
+  --border-red:rgba(232,54,74,0.3);
+  --text:#f0f2f7;
+  --text-muted:#8b91a8;
+  --text-dim:#555c72;
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-body:'DM Sans',sans-serif;
+  --radius:12px;
+  --radius-lg:18px;
+  --transition:0.35s cubic-bezier(0.4,0,0.2,1);
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-body);
+  line-height:1.65;
+  min-height:100vh;
+}
+
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--red);border-radius:99px;}
+
+.container{max-width:1200px;margin:0 auto;padding:0 5%;}
+
+/* Page header */
+.page-header{
+  padding:80px 0 60px;
+  text-align:center;
+}
+.section-label{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--red);
+  margin-bottom:16px;
+}
+.section-label::before{
+  content:'';
+  display:block;
+  width:28px;height:1.5px;
+  background:var(--red);
+  border-radius:99px;
+}
+.sub-title{
+  font-family:var(--font-display);
+  font-size:clamp(32px,5vw,52px);
+  font-weight:500;
+  letter-spacing:-0.02em;
+  line-height:1.1;
+  color:var(--text);
+}
+
+/* Back nav */
+.back-nav{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:var(--text-muted);
+  text-decoration:none;
+  font-size:13.5px;
+  font-weight:500;
+  margin-bottom:40px;
+  width:fit-content;
+  transition:var(--transition);
+  padding:8px 14px;
+  border-radius:8px;
+  border:1px solid var(--border);
+  background:var(--surface);
+}
+.back-nav:hover{color:var(--red);border-color:var(--border-red);}
+.back-nav i{font-size:12px;}
+
+/* Work grid */
+.work-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:24px;
+  padding-bottom:80px;
+}
+
+/* Work card */
+.work{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  position:relative;
+  transition:var(--transition);
+  opacity:0;
+  transform:translateY(28px);
+  animation:fadeUp 0.55s ease forwards;
+}
+.work:nth-child(1){animation-delay:0.05s;}
+.work:nth-child(2){animation-delay:0.13s;}
+.work:nth-child(3){animation-delay:0.21s;}
+.work:nth-child(4){animation-delay:0.29s;}
+
+@keyframes fadeUp{
+  to{opacity:1;transform:translateY(0);}
+}
+
+.work:hover{
+  border-color:var(--border-red);
+  transform:translateY(-4px);
+  box-shadow:0 20px 60px rgba(0,0,0,0.5);
+}
+
+.work img{
+  width:100%;
+  height:210px;
+  object-fit:cover;
+  display:block;
+  transition:transform 0.5s ease, filter 0.5s ease;
+  filter:brightness(0.82);
+}
+.work:hover img{transform:scale(1.05);filter:brightness(1);}
+
+.work-info{
+  padding:18px 20px 20px;
+}
+.work-info h3{
+  font-size:16px;
+  font-weight:600;
+  color:var(--text);
+  margin-bottom:8px;
+}
+.work-info p{
+  font-size:13px;
+  color:var(--text-muted);
+  line-height:1.65;
+  margin-bottom:16px;
+}
+.work-link{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:13px;
+  font-weight:600;
+  color:var(--red);
+  text-decoration:none;
+  letter-spacing:0.02em;
+  transition:var(--transition);
+}
+.work-link:hover{gap:10px;}
+.work-link i{font-size:11px;}
+
+/* Back button */
+.btn-back{
+  display:block;
+  width:fit-content;
+  margin:0 auto 80px;
+  border:1px solid var(--border-red);
+  color:var(--red);
+  padding:12px 32px;
+  border-radius:var(--radius);
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:0.04em;
+  background:var(--red-dim);
+  transition:var(--transition);
+  font-family:var(--font-body);
+}
+.btn-back:hover{background:var(--red);color:#fff;}
+
+.section-divider{
+  width:100%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--border),transparent);
+  margin:0 0 60px;
+}
+
+@media(max-width:640px){
+  .page-header{padding:60px 0 40px;}
+  .work-list{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="page-header">
+    <div class="section-label">Portfolio</div>
+    <h1 class="sub-title">More Projects</h1>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <div class="work-list">
+
+    <!-- Project 4 -->
+    <div class="work">
+      <img src="images/Financial_complaints_main_image.png" alt="Financial Complaints Analysis">
+      <div class="work-info">
+        <h3>Financial Complaints</h3>
+        <p>Examining customer grievances related to financial products and services. Identifies recurring issues, assesses service quality, and analyzes complaint patterns and resolution timelines to improve compliance and customer satisfaction.</p>
+        <a href="financial_complaints.html" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="work">
+      <img src="images/emergency room.jpg" alt="Emergency Room Analysis">
+      <div class="work-info">
+        <h3>Emergency Room</h3>
+        <p>Examining patient flow, treatment times, and emergency case patterns to evaluate ER efficiency. Helps healthcare teams understand peak hours, resource utilization, and common emergencies to optimize staffing and reduce wait times.</p>
+        <a href="emergency_room.html" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Project 6 -->
+    <div class="work">
+      <img src="images/Accident.jpg" alt="Accident Data Analysis">
+      <div class="work-info">
+        <h3>Accident Data Analysis</h3>
+        <p>Examining road incident trends, casualty severity, and contributing factors to evaluate transportation safety. Identifies high-risk locations, common causes, and vulnerable road users to support data-driven safety decisions.</p>
+        <a href="accident_data_analysis.html" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Project 7 -->
+    <div class="work">
+      <img src="images/Patient survey main images.jpg" alt="Patient Survey Analysis">
+      <div class="work-info">
+        <h3>Patient Survey</h3>
+        <p>Helping healthcare organizations understand patient satisfaction and care experience. Evaluates feedback on communication, treatment quality, wait times, and staff behavior to guide service improvements and increase patient trust.</p>
+        <a href="patient_survey.html" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <a href="index.html" class="btn-back"><i class="fas fa-arrow-left" style="margin-right:8px;"></i> Back to Portfolio</a>
+</div>
+
+</body>
+</html>
