@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Accident Data Analysis — Santosh Portfolio</title>
+<title>Patient Survey Analysis — Santosh Portfolio</title>
 <link rel="icon" href="images/facicon.png" type="image/x-icon">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,7 +100,7 @@ nav .fa-bars, nav .fa-circle-xmark{display:none;font-size:22px;cursor:pointer;co
   margin:0 0 48px;
 }
 
-.tableauWrapper{
+.TableauWrapper{
   background:var(--surface);border:1px solid var(--border);
   border-radius:var(--radius-lg);overflow:hidden;
   margin-bottom:56px;transition:var(--transition);
@@ -108,16 +108,15 @@ nav .fa-bars, nav .fa-circle-xmark{display:none;font-size:22px;cursor:pointer;co
   animation:fadeUp 0.6s ease forwards;
 }
 @keyframes fadeUp{to{opacity:1;transform:translateY(0);}}
-.tableauWrapper:hover{border-color:var(--border-red);}
+.TableauWrapper:hover{border-color:var(--border-red);}
 
-.tableauWrapper a{display:block;text-decoration:none;position:relative;}
-.tableauWrapper img{
-  width:100%;height:auto;display:block;
-  object-fit:contain;object-position:top;
-  filter:brightness(0.9);transition:var(--transition);
+.TableauWrapper a{display:block;text-decoration:none;position:relative;}
+.TableauWrapper img{
+  width:100%;height:580px;object-fit:cover;object-position:top;
+  display:block;filter:brightness(0.9);transition:var(--transition);
 }
-.tableauWrapper a:hover img{filter:brightness(1);}
-.tableauWrapper a::after{
+.TableauWrapper a:hover img{filter:brightness(1);}
+.TableauWrapper a::after{
   content:'Open Interactive Dashboard';
   position:absolute;inset:0;
   display:flex;align-items:center;justify-content:center;
@@ -125,14 +124,14 @@ nav .fa-bars, nav .fa-circle-xmark{display:none;font-size:22px;cursor:pointer;co
   color:#fff;letter-spacing:0.04em;
   background:rgba(232,54,74,0);transition:var(--transition);pointer-events:none;
 }
-.tableauWrapper a:hover::after{background:rgba(232,54,74,0.18);}
+.TableauWrapper a:hover::after{background:rgba(232,54,74,0.18);}
 
-.tableau-cta{
+.dashboard-cta{
   display:flex;align-items:center;justify-content:center;gap:8px;
   padding:16px 20px;border-top:1px solid var(--border);
   font-size:13.5px;color:var(--text-muted);
 }
-.tableau-cta i{font-size:13px;color:var(--red);}
+.dashboard-cta i{font-size:13px;color:var(--red);}
 
 .btn-back{
   display:block;width:fit-content;margin:0 auto 80px;
@@ -158,13 +157,14 @@ nav .fa-bars, nav .fa-circle-xmark{display:none;font-size:22px;cursor:pointer;co
   nav .fa-bars{display:block;}
   .page-header{padding:48px 0 32px;}
   .page-header h1{font-size:28px;}
+  .TableauWrapper img{height:280px;}
 }
 </style>
 </head>
 <body>
 
 <nav>
-  <img src="images/accidnt_logo.jpg" alt="Accident Data Analysis" class="logo">
+  <img src="images/patient_survey.png" alt="Patient Survey Analysis" class="logo">
   <ul id="sidemenu">
     <li><a href="index.html#header">Home</a></li>
     <li><a href="index.html#about">About</a></li>
@@ -179,22 +179,22 @@ nav .fa-bars, nav .fa-circle-xmark{display:none;font-size:22px;cursor:pointer;co
 
   <div class="page-header">
     <div class="section-label">Project Dashboard</div>
-    <h1>Accident Data Analysis</h1>
+    <h1>Patient Survey Analysis</h1>
     <div class="hint-badge">
       <i class="fas fa-hand-pointer"></i>
-      Click the dashboard to open the interactive Tableau report
+      Click the dashboard to open the interactive Power BI report
     </div>
   </div>
 
   <div class="section-divider"></div>
 
-  <div class="tableauWrapper">
-    <a href="https://public.tableau.com/views/HospitalEmargencyRoom/EmergencyRoomDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank">
-      <img src="images/accident_data_dashboard.jpg" alt="Accident Data Tableau Dashboard Preview">
+  <div class="TableauWrapper">
+    <a href="https://app.powerbi.com/links/eufmiJF1kk?ctid=4534a0c7-6a84-4c54-b54c-d8d63521116e&pbi_source=linkShare&bookmarkGuid=27c303b7-bf54-42a8-8ade-e0ba82bed33b" target="_blank">
+      <img src="images/Patient_survey_dashboard.png" alt="Patient Survey Power BI Dashboard Preview">
     </a>
-    <div class="tableau-cta">
+    <div class="dashboard-cta">
       <i class="fas fa-external-link-alt"></i>
-      Click to open interactive Tableau dashboard
+      Click to open interactive Power BI dashboard
     </div>
   </div>
 
